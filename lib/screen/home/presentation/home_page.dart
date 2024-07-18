@@ -45,9 +45,9 @@ class HomePage extends GetView<HomeController> {
                                 value as Map<String, dynamic>);
                           },
                         ),
-                  SizedBox(height: 20),
-                  Text("Sub District"),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
+                  const Text("Sub District"),
+                  const SizedBox(height: 20),
                   controller.isLoading.value
                       ? const Center(
                           child: CircularProgressIndicator(),
@@ -55,7 +55,7 @@ class HomePage extends GetView<HomeController> {
                       : CustomDropDownItem<Places>(
                           lists: controller.subDistrictResponse?.value.places ??
                               [],
-                          hint: "Select Sub District",
+                          hint: "Select Sub Districts",
                           onChanged: (selectedValue) {},
                           displayTextExtractor: (item) => item.name ?? '',
                           valueConverter: (value) {
